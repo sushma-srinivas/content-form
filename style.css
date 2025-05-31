@@ -1,0 +1,111 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  margin: 0;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+header {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form, .todo-section {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+form:hover, .todo-section:hover {
+  transform: translateY(-3px);
+}
+
+input[type="text"], input[type="email"] {
+  padding: 12px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+  border-color: #00aaff;
+  outline: none;
+}
+
+button {
+  background-color: #00aaff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #007acc;
+}
+
+#formMessage {
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+.todo-section input {
+  width: 70%;
+}
+
+.todo-section button {
+  width: 28%;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+ul li {
+  padding: 10px;
+  background: #f1f1f1;
+  margin-top: 8px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+ul li button {
+  background-color: #ff5c5c;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+ul li button:hover {
+  background-color: #e60000;
+}
+
+@media (min-width: 768px) {
+  body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
